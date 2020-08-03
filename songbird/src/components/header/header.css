@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+ 
+}
+.header__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination{
+    justify-content: space-between;
+}
+
+.page-item{
+    flex: auto;
+    text-align: center;
+    outline: none;
+}
+.page-link:hover{
+    background-color:#282828;
+    outline: none;
+}
