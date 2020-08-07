@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactAudioPlayer from 'react-audio-player';
 
 
 export default class AudioPlayer extends Component {
@@ -74,7 +75,8 @@ render(){
     console.log('render ')
     return(
         <div className='audio-player'>
-        <audio id='audio' ref={(input) => {this.audioRef = input}} src={this.props.element.audio}  style={{ display: 'none' }} />
+            
+        <audio id='audio' ref={(input) => {this.audioRef = input}} src={this.props.element.audio}  style={{ display: 'none' }} /> 
             {this.state.isPlaying ? (
                 <button type="button" className="play" onClick={() => this.onPlay()} >          
                     <FontAwesomeIcon icon='play' />

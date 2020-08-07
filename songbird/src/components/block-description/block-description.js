@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AudioPlayer from '../audio-player/index'
 
 export default class BlockDescription extends Component {
 
@@ -19,7 +20,7 @@ render(){
                     <li className='block-description__name-bird'><h5>{ array[index].name}</h5></li>
                     <li className='block-description__name-bird-english'><h6>{ array[index].species}</h6></li>
                     <li>
-               
+                    <AudioPlayer element={array[index]}/> 
                     </li>
             </ul>
             </div>
