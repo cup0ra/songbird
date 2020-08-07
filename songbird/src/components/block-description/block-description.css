@@ -1,0 +1,41 @@
+.block-description{
+    width: 50%;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 5px;
+}
+.block-description__item1{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.block-description___img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.block-description__name-bird{
+    text-align: start;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black ;
+}
+.block-description__name-bird-english{
+    text-align: start;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black ;
+}
+.block-description__audio{
+    height: 100%;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+.block-description__audio audio{
+    width: 100%;
+}
+.description-bird{
+  
+}
