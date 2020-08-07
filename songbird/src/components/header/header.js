@@ -6,7 +6,7 @@ export default class AppHeader extends Component  {
 
 render(){
  const element =  level.map((item,i) => {
-    const active = 'page-item ';
+    const active = this.props.index === i ? 'page-item active' : 'page-item ';
     return (
       <li key={i} className={active}>
       <a className="page-link" href="#" >{item}</a>
@@ -17,7 +17,7 @@ render(){
     <div className='header'> 
     <div className='header__item'>
     <h2>SongBird</h2>
-      <div>Score:</div>
+      <div className='score'>Score: {this.props.score} </div>
     </div>
       
     <div>

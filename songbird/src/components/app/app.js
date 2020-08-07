@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import AppHeader from '../header/index';
 import birdsData from '../../data/birdsData';
+import BlockVictory from '../block-victory/index';
 import MainBlock from '../main-block/index';
 import ButtonNextRound from '../button-next-round/index';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import 'regenerator-runtime/runtime';
 
-library.add(fab, faCheckSquare, faCoffee, faPlay)
+library.add(fab, faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp)
 
 
 export default  class App extends Component  {
@@ -17,6 +18,7 @@ export default  class App extends Component  {
       value: 0,
       score: 0 ,
       done: false,
+      victory: false,
     }
 
   updateState() {
@@ -25,28 +27,40 @@ export default  class App extends Component  {
       if(this.state.done){
         this.setState(() => ({done:false}))
         console.log('props',this.props)
-      }
+      }  
+    }
+    if(this.state.value === 5){
+      this.setState(() => ({victory: true}))
     }
    
   }
   updateStateDone(value) {
       this.setState(() => ({done: true})) 
       this.setState((state) => ({score:state.score + value})) 
-      console.log(this.state.score)
   }
 
 
   render(){
-    const {value, score,  done} = this.state
+    const {value, score,  done, victory} = this.state
     return (
+     
       <div className='app'>
-      <AppHeader index ={value} score={score}/>
-      <MainBlock 
-      array = {birdsData[value]}
-      value={value} 
-      done={done} 
-      updateDone={(value) => this.updateStateDone(value)}/>
-      <ButtonNextRound update={() => this.updateState()} />
+        <AppHeader index ={value} score={score}/>
+       {victory ? (
+         <>
+         <BlockVictory score={score}/>
+         </>
+         ) : (
+           <> 
+          <MainBlock 
+          array = {birdsData[value]}
+          value={value} 
+          done={done} 
+          updateDone={(value) => this.updateStateDone(value)}/>
+          <ButtonNextRound update={() => this.updateState()}  done={done} />
+          </>
+       )} 
+      
     </div>
     )
   }

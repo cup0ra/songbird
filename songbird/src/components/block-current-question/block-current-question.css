@@ -26,6 +26,3 @@
     justify-content: space-between;
     list-style: none;
 }
-.block-current-question__audio audio{
-    width: 100%;
-}

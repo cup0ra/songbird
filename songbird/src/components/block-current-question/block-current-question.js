@@ -1,7 +1,6 @@
-
 import React, { Component } from 'react';
 import bird from '../../assets/image/bird.jpg';
-
+import AudioPlayer from '../audio-player/index'
 
 export default class BlockCurrentQuestion extends Component {
 render(){
@@ -16,7 +15,7 @@ render(){
             <ul className='block-current-question__audio'>
                 <li className='block-current-question__name-bird'><h4>{nameBird}</h4></li>
                 <li>
-                   
+                    <AudioPlayer element={element}/> 
                 </li>
             </ul>
         </div>
