@@ -1,0 +1,12 @@
+.block-answer-options{
+    flex: auto;
+    margin-right: 15px;
+
+}
+.li-btn{
+    width: 10px;
+    height: 10px;
+    background-color: #00000033;
+    border-radius: 50%;
+    margin-right: 30px;
+}

@@ -1,0 +1,9 @@
+.li-btn{
+    transition: .2s;
+}
+.done{
+    background-color: red !important;
+}
+.green{
+    background-color: green !important;
+}
