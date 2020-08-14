@@ -9,9 +9,10 @@
     border-radius: 5px;
 }
 .block-current-question___img{
-    width: 200px;
+    width: 170px;
     height: 150px;
     border-radius: 10px;
+    
 }
 .block-current-question__name-bird{
     text-align: start;
@@ -25,4 +26,23 @@
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
+}
+
+@media (min-width: 320px) and (max-width: 570px) {
+    .block-current-question{
+        flex-direction: column;
+    }
+    .block-current-question__audio{
+        height: 100%;
+        margin: 0px !important;
+        padding-left: 0px;
+    }
+    .block-current-question__name-bird{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+        border-bottom: 1px solid black ;
+    }
+   
 }

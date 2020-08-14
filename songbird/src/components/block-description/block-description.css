@@ -15,6 +15,7 @@
     width: 150px;
     height: 150px;
     border-radius: 10px;
+    background-size: cover;
 }
 .block-description__name-bird{
     text-align: start;
@@ -34,4 +35,29 @@
     list-style: none;
 }
 
-
+@media (min-width: 768px) and (max-width: 1280px) {
+    .block-description{
+        width: 60%;
+       
+    }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .block-description{
+        width: 100%;  
+    }
+}
+@media (min-width: 320px) and (max-width: 570px) {
+    .block-description__item1{
+       flex-direction: column; 
+    }
+    .block-description__name-bird{
+        margin-top: 15px;
+    }
+    .block-description__name-bird,
+    .block-description__name-bird-english{
+        text-align: center;
+    }
+    .block-description__audio{
+padding-left: 0px;
+    }
+}
