@@ -9,6 +9,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import 'regenerator-runtime/runtime';
 
+
 library.add(fab, faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp)
 
 
@@ -22,11 +23,11 @@ export default  class App extends Component  {
     }
 
   updateState() {
+
     if(this.state.value < 5 && this.state.done){
       this.setState((state) => ({value:state.value + 1}))
       if(this.state.done){
         this.setState(() => ({done:false}))
-        console.log('props',this.props)
       }  
     }
     if(this.state.value === 5){
@@ -38,7 +39,15 @@ export default  class App extends Component  {
       this.setState(() => ({done: true})) 
       this.setState((state) => ({score:state.score + value})) 
   }
-
+ 
+  restartGame() {
+    this.setState(() => ({
+      value: 0,
+      score: 0 ,
+      done: false,
+      victory: false,
+    })) 
+  }
 
   render(){
     const {value, score,  done, victory} = this.state
@@ -48,7 +57,7 @@ export default  class App extends Component  {
         <AppHeader index ={value} score={score}/>
        {victory ? (
          <>
-         <BlockVictory score={score}/>
+         <BlockVictory restart={() => this.restartGame()}  score={score}/>
          </>
          ) : (
            <> 
@@ -57,7 +66,9 @@ export default  class App extends Component  {
           value={value} 
           done={done} 
           updateDone={(value) => this.updateStateDone(value)}/>
-          <ButtonNextRound update={() => this.updateState()}  done={done} />
+          <ButtonNextRound 
+          update={() => this.updateState()}
+          done={done} />
           </>
        )} 
       

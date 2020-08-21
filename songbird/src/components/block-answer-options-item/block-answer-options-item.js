@@ -31,10 +31,9 @@ componentDidUpdate(prevProps) {
     }
   }
     render(){
-        const{items, done} = this.props
+        const{items} = this.props
         let className = "li-btn"
         let style = {backgroundColor: this.state.color}
-        console.log(items.id)
         return(
             <li 
             key={ items.id }  

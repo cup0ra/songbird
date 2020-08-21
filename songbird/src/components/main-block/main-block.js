@@ -40,6 +40,7 @@ export default class MainBlock extends Component {
             <BlockDescription 
             array = {array} 
             index= {index}
+            value={value} 
             />
             </div>
             </>

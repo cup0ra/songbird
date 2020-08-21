@@ -173,7 +173,7 @@ const birdsData = [
         species: 'Troglodytes troglodytes',
         description: 'Птица очень подвижная, с необычно громким голосом — самцы помечают свою обширную территорию, сидя на каком-нибудь возвышении и распевая свою своеобразную, торопливую песню, состоящую из очень звучных быстрых трелей.',
         image: 'https://live.staticflickr.com/65535/50114941943_1b2848513c_q.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/AGCYXCXXSH/XC564611-llucareta%202%206%2010.mp3'
+        audio: 'https://www.xeno-canto.org/sounds/uploaded/LFZNDNTEVP/XC575167-20200712-134820--Kaalupi_tee-MKE600.mp3'
       },
       {
         id: 4,

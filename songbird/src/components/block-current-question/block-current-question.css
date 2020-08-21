@@ -12,6 +12,7 @@
     width: 170px;
     height: 150px;
     border-radius: 10px;
+    transition: .5s;
     
 }
 .block-current-question__name-bird{

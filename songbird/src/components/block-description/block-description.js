@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import AudioPlayer from '../audio-player/index'
 
 export default class BlockDescription extends Component {
+    constructor(){
+        super()
+        this.keys = '2';
+    }
 
+ 
+    
 render(){
+   
     const {array, index} = this.props;
-
     return (
       <div className='block-description'>
         {index === null ? (
@@ -20,7 +26,8 @@ render(){
                     <li className='block-description__name-bird'><h5>{ array[index].name}</h5></li>
                     <li className='block-description__name-bird-english'><h6>{ array[index].species}</h6></li>
                     <li>
-                    <AudioPlayer element={array[index]}/> 
+                       <AudioPlayer element={array[index]} keys={this.keys}/> 
+                    
                     </li>
             </ul>
             </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 .header{
     width: 100%;
  
@@ -8,11 +10,19 @@
     justify-content: space-between;
     align-items: center;
 }
+.header__item h2{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2.5rem;
+    margin:5px 0 10px 0;
+}
+.header__item h2 span{
+    color: #2a9fd6;
+}
 .pagination{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+a { outline: none !important;}
 .page-item{
     flex: auto;
     text-align: center;
@@ -20,9 +30,26 @@
 }
 .page-link:hover{
     background-color:#282828;
-    outline: none;
+    cursor: auto;
+}
+.page-link:focus{
+    outline: 0 none !important; 
+    
 }
 .score{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
+    background-color: #2a9fd6;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 475px) {
+	.header__item h2{
+		font-size: 2rem;
+    }
+    .score{
+        font-size: 1rem;
+        color: white;
+    }
 }
