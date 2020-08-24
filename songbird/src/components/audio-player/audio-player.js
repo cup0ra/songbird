@@ -30,7 +30,9 @@ export default class AudioPlayer extends Component {
         this.setState(() => ({volume: volume.value}));
         this.audio.current.volume=this.state.volume;
     }
-
+   onEndedAudio() {
+    this.setState(() => ({isPlaying: true})); 
+    } 
 
     componentDidUpdate(prevProps) {
         if (this.props.done !== prevProps.done) {
@@ -44,7 +46,6 @@ export default class AudioPlayer extends Component {
       }
   
 render(){
-    console.log('render ', this.props.keys)
     return(
         <div className='audio-player'>
             
@@ -58,7 +59,10 @@ render(){
                     <FontAwesomeIcon icon='pause' />
                 </button> 
                 )}
-                <ProgressBar audio={this.audio}  element={this.props.element}/>
+                <ProgressBar 
+                audio={this.audio} 
+                onEndedAudio={() => this.onEndedAudio()}
+                element={this.props.element}/>
                 <FontAwesomeIcon icon='volume-up' />
                 <input 
                 ref={(ref) => this.InputVolume = ref} 

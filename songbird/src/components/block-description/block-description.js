@@ -5,12 +5,8 @@ export default class BlockDescription extends Component {
     constructor(){
         super()
         this.keys = '2';
-    }
-
- 
-    
+    }  
 render(){
-   
     const {array, index} = this.props;
     return (
       <div className='block-description'>
@@ -27,9 +23,8 @@ render(){
                     <li className='block-description__name-bird-english'><h6>{ array[index].species}</h6></li>
                     <li>
                        <AudioPlayer element={array[index]} keys={this.keys}/> 
-                    
                     </li>
-            </ul>
+                </ul>
             </div>
             <div className='description-bird'>{array[index].description}</div>
                 </>

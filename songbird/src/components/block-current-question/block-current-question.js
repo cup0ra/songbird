@@ -9,7 +9,6 @@ export default class BlockCurrentQuestion extends Component {
     }
     
 render(){
-    console.log(this.props.array.name)
     const element = this.props.array
     const image = this.props.plug === false ? bird : element.image;
     const nameBird = this.props.plug === false ? '******' : element.name;

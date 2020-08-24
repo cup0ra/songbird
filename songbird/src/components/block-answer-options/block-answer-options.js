@@ -9,7 +9,6 @@ state={
 updateScore = () => {
   if(this.state.score > 0){
     this.setState((state) => ({score: state.score - 1}))
-    console.log(this.state)
   }
 }
 

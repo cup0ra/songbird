@@ -44,6 +44,7 @@ export default class ProgressBar extends Component {
 			clearInterval(this.currentTimeInterval);
         };
         this.audio.onended = () => {
+            this.props.onEndedAudio();
             this.setState(() => ({
                 currentTime: '0',
                 timeValue: '0',

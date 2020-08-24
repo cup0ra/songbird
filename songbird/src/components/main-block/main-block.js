@@ -22,8 +22,6 @@ export default class MainBlock extends Component {
     render(){
         const {index, color} = this.state;
         const {array, done, updateDone, value} = this.props;
-       
-        
         return(
           <>
           <BlockCurrentQuestion array = {this.element} plug ={done} />

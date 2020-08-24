@@ -9,7 +9,7 @@ render(){
     const active = this.props.index === i ? 'page-item active' : 'page-item ';
     return (
       <li key={i} className={active}>
-      <a className="page-link" href="/" >{item}</a>
+      <a className="page-link" href="/#" >{item}</a>
     </li>
     )
   })
