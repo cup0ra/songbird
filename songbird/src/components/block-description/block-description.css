@@ -1,15 +1,38 @@
 .block-description{
     width: 50%;
-    background-color: #282828;
+    height: 277px;
+    background-color: #222;
     padding: 20px 20px 10px 20px;
     border-radius: 5px;
+    overflow-y: auto;
 }
+/* .block-description:hover{
+    overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      -moz-overflow-scrolling: touch;
+      -ms-overflow-scrolling: touch;
+      -o-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+  } */
+  .block-description::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 4px;
+      background-color: rgba(0,0,0,0.3);
+  }
+  .block-description::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background-color:  #2a9fd683;
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+      
+  }
 .block-description__item1{
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: center;
+    align-items: center;
+    margin-right: 10px;
 }
 .block-description___img{
     width: 150px;
@@ -20,12 +43,12 @@
 .block-description__name-bird{
     text-align: start;
     margin-bottom: 5px;
-    border-bottom: 1px solid black ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
 }
 .block-description__name-bird-english{
     text-align: start;
     margin-bottom: 5px;
-    border-bottom: 1px solid black ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
 }
 .block-description__audio{
     height: 100%;
@@ -33,6 +56,7 @@
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
+    margin-top: 10px;
 }
 .description-bird{
 margin-top: 10px;
@@ -45,10 +69,12 @@ margin-top: 10px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
     .block-description{
-        width: 100%;  
+        width: 100%;
+        height: auto;  
     }
 }
 @media (min-width: 320px) and (max-width: 570px) {
+  
     .block-description__item1{
        flex-direction: column; 
     }

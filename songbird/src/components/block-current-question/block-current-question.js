@@ -9,9 +9,11 @@ export default class BlockCurrentQuestion extends Component {
     }
     
 render(){
+    
     const element = this.props.array
     const image = this.props.plug === false ? bird : element.image;
     const nameBird = this.props.plug === false ? '******' : element.name;
+    console.log(element.name)
     return (
         <div className='block-current-question'>
             <img className='block-current-question___img' src={ image } alt={ element.name}/>

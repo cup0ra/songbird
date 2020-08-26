@@ -10,7 +10,10 @@
 .block-victory p{
 	text-align: center;
 }
-
+.btn:focus{
+    outline: 0 none;
+    box-shadow: none;
+}
 @media (min-width: 0px) and (max-width: 475px) {
 	.block-victory h2{
 		font-size: 2rem;

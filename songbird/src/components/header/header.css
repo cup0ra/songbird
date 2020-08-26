@@ -28,8 +28,6 @@ a { outline: none !important;}
 .page-item{
     flex: auto;
     text-align: center;
-    outline: none;
-    
 }
 .page-link:hover{
     background-color:#282828;
@@ -37,7 +35,7 @@ a { outline: none !important;}
 }
 .page-link:focus{
     outline: 0 none !important; 
-    
+    box-shadow: none;
 }
 .score{
     font-size: 1rem;

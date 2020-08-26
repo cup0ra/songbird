@@ -3,3 +3,9 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+
+.btn:focus{
+    outline: 0 none;
+    box-shadow: none;
+}
