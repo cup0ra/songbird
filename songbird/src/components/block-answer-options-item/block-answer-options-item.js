@@ -16,10 +16,12 @@ handleClick = () => {
         this.audio = new Audio(correct);
         this.audio.play();
     }else{
+      if(this.state.color === ''){
+        this.props.updateScore()
+      }
       this.setState({color:'red'}) 
-      this.props.updateScore()
       this.audio = new Audio(wrong);
-          this.audio.play();
+      this.audio.play();
     }
    
 }
