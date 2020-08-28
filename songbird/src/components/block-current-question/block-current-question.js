@@ -7,13 +7,20 @@ export default class BlockCurrentQuestion extends Component {
         super()
         this.keys = '1';
     }
-    
+
+    componentDidMount(){
+        console.log(this.props.array.name)  
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.array.name !== prevProps.array.name) {
+            console.log(this.props.array.name)
+        }
+      }
+      
 render(){
-    
     const element = this.props.array
     const image = this.props.plug === false ? bird : element.image;
     const nameBird = this.props.plug === false ? '******' : element.name;
-    console.log(element.name)
     return (
         <div className='block-current-question'>
             <img className='block-current-question___img' src={ image } alt={ element.name}/>
