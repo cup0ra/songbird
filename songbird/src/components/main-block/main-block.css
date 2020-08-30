@@ -1,0 +1,15 @@
+.main-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+ }
+
+ @media (min-width: 0px) and (max-width: 767px) {
+    .main-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 15px;
+     }
+}

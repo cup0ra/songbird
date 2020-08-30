@@ -1,0 +1,26 @@
+.next-level{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.btn:focus{
+    outline: 0 none;
+    box-shadow: none;
+}
+.btn-secondary{
+    cursor: default !important;
+    background-color: #222;
+    border: 1px solid #222 !important;
+}
+.btn-secondary:hover{
+    background-color: #222;  
+}
+.btn-secondary:focus{
+    background-color: #222 !important;  
+}
+.btn-secondary:active{
+    background-color: #222 !important; 
+    box-shadow: none !important; 
+}
