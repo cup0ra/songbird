@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import correct from '../../assets/audio/correct.mp3'
 import wrong from '../../assets/audio/wrong.mp3'
+import clickEffect from '../../data/clickEffect'
 
 export default class BlockAnswerOptionsItem extends Component{
 state = {
    color:'',
    correct: '.'
 }
-handleClick = () => {
+handleClick = (e) => {
   this.props.update(this.props.items.id-1)
   if(!this.props.done){
     if(this.props.items.id === this.props.numberQuestion){
@@ -23,8 +24,9 @@ handleClick = () => {
       this.audio = new Audio(wrong);
       this.audio.play();
     }
-   
+    
 }
+clickEffect(e)
   }
  
 componentDidUpdate(prevProps) {
@@ -40,7 +42,7 @@ componentDidUpdate(prevProps) {
             <li 
             key={ items.id }  
             className="list-group-item d-flex justify-content-start align-items-center"
-            onClick={() => this.handleClick()}
+            onClick={(e) => this.handleClick(e)}
             >
             <span className={className} style={style}> </span>
             {items.name}

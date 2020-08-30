@@ -7,3 +7,21 @@
 .green{
     background-color: green !important;
 }
+.list-group-item{
+    cursor: pointer;
+    transition: .5s !important;
+    position:relative ;
+    overflow:hidden;
+    transition: all 0.5s ease;
+    z-index:0;
+}
+.list-group-item:hover{
+    cursor: pointer;
+    transition: .5s !important;
+}
+.list-group-item:active{
+    cursor: pointer;
+    transition: .3s !important;
+   border-bottom:0.5px solid rgba(255, 255, 255, 0.158) !important;
+}
+
