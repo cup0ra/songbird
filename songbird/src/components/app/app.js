@@ -6,15 +6,15 @@ import MainBlock from '../main-block/index';
 import ButtonNextRound from '../button-next-round/index';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { faPlayCircle, faPauseCircle, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import 'regenerator-runtime/runtime';
 
 
-library.add(fab, faCheckSquare, faCoffee, faPlay, faPause, faVolumeUp)
+library.add(fab,far, faPlayCircle, faPauseCircle, faVolumeUp)
 
 
 export default  class App extends Component  {
-
     state = {
       value: 0,
       score: 0 ,
@@ -23,7 +23,6 @@ export default  class App extends Component  {
     }
 
   updateState() {
-
     if(this.state.value < 5 && this.state.done){
       this.setState((state) => ({value:state.value + 1}))
       if(this.state.done){

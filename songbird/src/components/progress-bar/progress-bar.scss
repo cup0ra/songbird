@@ -5,7 +5,7 @@ $track-height: 3px;
 $upper-color: #cfcfcf;
 $lower-color: #2a9fd6;
 $thumb-color: #2a9fd6;
-$thumb-hover-color: #2a9fd6;
+$thumb-hover-color: #2387b7;
 
 $upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
 $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
@@ -49,7 +49,6 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
     }
   }
   
-  // Webkit
   .e-range::-webkit-slider-runnable-track {
     width: 100%;
     height: $height;
@@ -68,9 +67,9 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
     margin-top: (-$thumb-height/2);
     box-shadow: webkit-slider-thumb-shadow();
     transition: background-color 150ms;
+    transition: 0.3s;
   }
   
-  // Firefox
   .e-range::-moz-range-track,
   .e-range::-moz-range-progress {
     width: 100%;
@@ -93,12 +92,10 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
     transition: background-color 150ms;
   }
   
-  // Internet Exploder
   .e-range::-ms-track {
     width: 100%;
     height: $height;
     border: 0;
-    // color needed to hide track marks
     color: transparent;
     background: transparent;
   }
@@ -118,24 +115,24 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
     background: $thumb-color;
     border-radius: 100%;
     border: 0;
-    transition: background-color 150ms;
-    // IE Edge thinks it can support -webkit prefixes
+    transition: background-color 300ms;
     top: 0;
     margin: 0;
     box-shadow: none;
   }
   
-  .e-range:hover,
-  .e-range:focus {
-  
+  .e-range:hover{  
     &::-webkit-slider-thumb {
       background-color: $thumb-hover-color;
+      transition: 0.3s;
     }
     &::-moz-range-thumb {
       background-color: $thumb-hover-color;
+      transition: 0.3s;
     }
     &::-ms-thumb {
       background-color: $thumb-hover-color;
+      transition: 0.3s;
     }
   }
   

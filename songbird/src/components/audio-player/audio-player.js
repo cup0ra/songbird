@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ProgressBar from '../progress-bar/index'
 
 
@@ -52,11 +52,11 @@ render(){
         <audio key={this.props.keys} id='audio' ref={this.audio} src={this.props.element.audio}  style={{ display: 'none' }} /> 
             {this.state.isPlaying ? (
                 <button type="button" className="play" onClick={() => this.onPlay()} >          
-                    <FontAwesomeIcon icon='play' />
+                    <FontAwesomeIcon icon={["far", "play-circle"]}/>
                 </button> 
                 ) : (
                 <button type="button" className="pause" onClick={() => this.onPause()} >
-                    <FontAwesomeIcon icon='pause' />
+                    <FontAwesomeIcon icon={["far", "pause-circle"]}/>
                 </button> 
                 )}
                 <ProgressBar 

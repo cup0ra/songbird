@@ -5,18 +5,26 @@ $track-height: 3px;
 $upper-color: #cfcfcf;
 $lower-color: #2a9fd6;
 $thumb-color: #2a9fd6;
-$thumb-hover-color: #2a9fd6;
+$thumb-hover-color: #2387b7;
 
 $upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
 $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
 
 .play,
 .pause{
+  font-size: 2rem;
   border: none;
   outline: none;
   background-color: transparent;
   color: $lower-color;
+  transition: 0.3s;
 }
+.play:hover,
+.pause:hover{
+  color: $thumb-hover-color;
+  transition: 0.3s;
+}
+
 button:active, button:focus {
   outline: none !important;
 }

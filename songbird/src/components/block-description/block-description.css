@@ -6,15 +6,7 @@
     border-radius: 5px;
     overflow-y: auto;
 }
-/* .block-description:hover{
-    overflow-y: auto;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      -moz-overflow-scrolling: touch;
-      -ms-overflow-scrolling: touch;
-      -o-overflow-scrolling: touch;
-      overflow-scrolling: touch;
-  } */
+
   .block-description::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 4px;
@@ -42,13 +34,17 @@
 }
 .block-description__name-bird{
     text-align: start;
-    margin-bottom: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+    padding-left: 10px;
 }
 .block-description__name-bird-english{
     text-align: start;
     margin-bottom: 5px;
+    padding: 5px 10px ;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+}
+.block-description__name-bird-english h6{
+    margin-bottom: 0;
 }
 .block-description__audio{
     height: 100%;
